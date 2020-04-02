@@ -47,20 +47,20 @@ ui_print " "
 sleep 2
 	
 # hide packages known to affect GPay using magiskhide
-ui_print "Attempting to hide packages known to affect GPay using magiskhide..."
+##ui_print "Attempting to hide packages known to affect GPay using magiskhide..."
 # the following few lines are contributed by digderidoohan - thanks for the delimiter and cutting routine for hiding Google Services Framework
 # i tried many ways of delimiting etc and none worked, his did, champion!
-packages='com.google.android.gsf_com.google.process.gapps com.google.android.gsf_com.google.process.gservices com.google.android.gms com.google.android.apps.walletnfcrel'
-	for i in $packages
-		do magiskhide add $(echo $i | cut -f 1 -d '_') $(echo $i | cut -f 2 -d '_')
-		if [ $? -eq 0 ] ;	then
-			ui_print "$i: hidden successfully"
-		else
-			ui_print "$i: already hidden"	
-		fi
-	done
-ui_print " "
-sleep 2	
+##packages='com.google.android.gsf_com.google.process.gapps com.google.android.gsf_com.google.process.gservices com.google.android.gms com.google.android.apps.walletnfcrel'
+##	for i in $packages
+##		do magiskhide add $(echo $i | cut -f 1 -d '_') $(echo $i | cut -f 2 -d '_')
+##		if [ $? -eq 0 ] ;	then
+##			ui_print "$i: hidden successfully"
+##		else
+##			ui_print "$i: already hidden"	
+##		fi
+##	done
+##ui_print " "
+##sleep 2	
 
 # clear Google Pay cache & storage, or not...now user gets a choice thanks to keycheck
 ui_print "Clear cache and storage for Google Pay?"
